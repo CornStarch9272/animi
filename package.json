@@ -1,0 +1,40 @@
+{
+  "name": "animi",
+  "private": true,
+  "packageManager": "bun@1.4.4",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "next": "^16.4.6",
+      "react": "^19.3.1",
+      "react-dom": "^19.3.1",
+      "eslint-config-next": "^16.4.6",
+      "lucide-react": "^1.73.0",
+      "react-zoom-pan-pinch": "^4.2.0",
+      "tailwindcss": "^4",
+      "@tailwindcss/postcss": "^4",
+      "typescript": "^6",
+      "eslint": "^10",
+      "@types/node": "^26",
+      "@types/react": "^19",
+      "@types/react-dom": "^19"
+    }
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "turbo": "^2.11.11"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint"
+  },
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}
