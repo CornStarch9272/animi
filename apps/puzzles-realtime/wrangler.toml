@@ -2,10 +2,7 @@ name = "puzzles-realtime"
 main = "src/index.ts"
 compatibility_date = "2025-01-01"
 
-routes = [
-  { pattern = "puzzles.animi.moe/api/*", custom_domain = false },
-  { pattern = "puzzles.animi.moe/ws/room/*", custom_domain = false }
-]
+workers_dev = true
 
 [[durable_objects.bindings]]
 name = "ROOM"

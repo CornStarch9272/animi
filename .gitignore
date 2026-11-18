@@ -27,6 +27,8 @@ coverage
 
 .wrangler
 *.vars
+.dev.vars
+.dev.vars*
 .vercel/
 
 .idea

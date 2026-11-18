@@ -72,7 +72,7 @@ You'll need a cloudflare account, and if you want to deploy boards, you also nee
 Each app (home, boards, and puzzles) should be deployed as its own separate Cloudflare Pages project.
 
 1. Navigate to your Cloudflare Dashboard and select Workers & Pages in the sidebar.
-2. Click Create application, then click **Continue to Pages** (next to **Need to use the legacy Pages workflow?**)
+2. Click Create application, then the "Continue to Pages" next to "Need to use the legacy Pages workflow?"
 3. Link your GitHub account and select your forked repository.
 4. Use these build settings (replace boards with any other):
 
@@ -81,13 +81,13 @@ Each app (home, boards, and puzzles) should be deployed as its own separate Clou
 - **Build output directory:** `apps/boards/out`
 - **Root directory:** _(leave blank)_
 
-5. Under Environment Variables, add any required production URLs or configuration variables (such as `NEXT_PUBLIC_PROXY_URL` or custom domains) before clicking Save and Deploy.
+5. Under Environment Variables, add any required production URLs or configuration variables (such as NEXT_PUBLIC_PROXY_URL or custom domains) before clicking Save and Deploy.
 
 ### Puzzles Realtime Worker
 
 The worker can be deployed locally from your terminal.
 
-1. Navigate to your `apps/puzzles-realtime` directory in your terminal
+1. Navigate to your apps/puzzles-realtime directory in your terminal
 
 ```bash
 cd apps/puzzles-realtime
@@ -99,7 +99,7 @@ cd apps/puzzles-realtime
 bunx wrangler deploy
 ```
 
-3. Set the `ADMIN_KEY` variable:
+3. Set the ADMIN_KEY variable with this command and type in your key when prompted:
 
 ```bash
 bunx wrangler secret put ADMIN_KEY
@@ -116,4 +116,4 @@ The boards app uses a proxy deployed on Vercel to handle downloading AniList ima
 3. In the project configuration settings, make sure the **Root Directory** setting is set to `apps/proxy`
 4. Deploy, Vercel should handle most of the setup
 
-Once deployed, use your Vercel proxy URL (e.g., [https://your-proxy-project.vercel.app](https://your-proxy-project.vercel.app)) as the value for the `NEXT_PUBLIC_PROXY_URL` environment variable for the boards app.
+Once deployed, use your Vercel proxy URL (e.g., [https://your-proxy-project.vercel.app](https://your-proxy-project.vercel.app)) as the value for the NEXT_PUBLIC_PROXY_URL environment variable for the boards app.
